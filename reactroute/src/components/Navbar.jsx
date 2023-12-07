@@ -45,6 +45,7 @@ function Navbar() {
           >
             <span>{route.icon}</span>
             <span>{route.name}</span>
+            
           </NavLink>
         ))}
       </div>
