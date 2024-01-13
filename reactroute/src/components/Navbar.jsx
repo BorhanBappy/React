@@ -29,6 +29,7 @@ const routes = [
 
 function Navbar() {
   const location = useLocation();
+  console.log(location.pathname)
   return (
     <nav className="bg-blue-500 ">
       <div className="flex justify-center items-center h-12 w-full bg-blue-500 space-x-2">
@@ -39,10 +40,11 @@ function Navbar() {
             className={cn(
               "flex items-center space-x-2 p-1 border rounded-md text-white ",
               location.pathname == route.to && " bg-black",
-            
+              // console.log( route.to ),
               route.to == "/about" &&location.pathname=="/about" && " bg-green-500"
             )}
           >
+            
             <span>{route.icon}</span>
             <span>{route.name}</span>
             
