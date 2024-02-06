@@ -159,12 +159,33 @@ var data = [
   // Add more objects as needed
 ];
 
-//   
-
+//
+function getBooks() {
+  return data;
+}
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
 // Destructuring
-const book = getBook(2);
-const title = book.title;
-title;
+const book = getBook(1);
+const {title,author,genres} = book;
+// title;
+// author;
+const books=getBooks();
+book;
+console.log(genres);
+console.log(genres[0]);
+const [primaryGenres,secondaryGenres,...restGenres]=genres;
+console.log(primaryGenres,secondaryGenres,restGenres);
+
+
+const newGenres=[...genres,'epic_fantasy']// copy previous array in new array
+console.log(newGenres);
+
+
+const updateBook={
+  ...book,
+  moviePublicationDate:'1999-04-20',
+  pages:2000,
+}
+console.log(updateBook);
